@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{237A1843-9628-46E3-9D08-35588A622C94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>OneClick_defender.My.MyApplication</StartupObject>
+    <RootNamespace>OneClick_defender</RootNamespace>
+    <AssemblyName>OneClick_defender</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OneClick_defender.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OneClick_defender.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>output_image__1_-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\vb plugins\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="auth.Designer.vb">
+      <DependentUpon>auth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="auth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cleanup.Designer.vb">
+      <DependentUpon>cleanup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cleanup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="close.Designer.vb">
+      <DependentUpon>close.vb</DependentUpon>
+    </Compile>
+    <Compile Include="close.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="danger.Designer.vb">
+      <DependentUpon>danger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="danger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVirusDetected.Designer.vb">
+      <DependentUpon>frmVirusDetected.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVirusDetected.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="full check.Designer.vb">
+      <DependentUpon>full check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="full check.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="notification.Designer.vb">
+      <DependentUpon>notification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="notification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prefetch.Designer.vb">
+      <DependentUpon>prefetch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prefetch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.vb">
+      <DependentUpon>profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quick scan.Designer.vb">
+      <DependentUpon>quick scan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="quick scan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.vb">
+      <DependentUpon>register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scan.Designer.vb">
+      <DependentUpon>scan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="scan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="settings.Designer.vb">
+      <DependentUpon>settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="settings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="speedup.Designer.vb">
+      <DependentUpon>speedup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="speedup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trialVersion.Designer.vb">
+      <DependentUpon>trialVersion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="trialVersion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userprofile.Designer.vb">
+      <DependentUpon>userprofile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userprofile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viruslist.Designer.vb">
+      <DependentUpon>viruslist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viruslist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viruslist1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>viruslist1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viruslistDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>viruslistDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viruslistDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>viruslistDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.Designer.vb">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="auth.resx">
+      <DependentUpon>auth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cleanup.resx">
+      <DependentUpon>cleanup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="close.resx">
+      <DependentUpon>close.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="danger.resx">
+      <DependentUpon>danger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="full check.resx">
+      <DependentUpon>full check.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification.resx">
+      <DependentUpon>notification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prefetch.resx">
+      <DependentUpon>prefetch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quick scan.resx">
+      <DependentUpon>quick scan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scan.resx">
+      <DependentUpon>scan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings.resx">
+      <DependentUpon>settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="speedup.resx">
+      <DependentUpon>speedup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trialVersion.resx">
+      <DependentUpon>trialVersion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userprofile.resx">
+      <DependentUpon>userprofile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viruslist.resx">
+      <DependentUpon>viruslist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="viruslist1.xsc">
+      <DependentUpon>viruslist1.xsd</DependentUpon>
+    </None>
+    <None Include="viruslist1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>viruslist1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="viruslist1.xss">
+      <DependentUpon>viruslist1.xsd</DependentUpon>
+    </None>
+    <None Include="viruslistDataSet.xsc">
+      <DependentUpon>viruslistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="viruslistDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>viruslistDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="viruslistDataSet.xss">
+      <DependentUpon>viruslistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="viruslistDataSet1.xsc">
+      <DependentUpon>viruslistDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="viruslistDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>viruslistDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="viruslistDataSet1.xss">
+      <DependentUpon>viruslistDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\scanning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_window_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\source.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\antivirus_scanner_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\running_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_tool_storage_box__filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uJSixCh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qrscananimation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-medical-card-scan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\______.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanning %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_mark_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DARK THEME.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DEFAULT.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RED.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computervirus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danger2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bellfinal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bellfinal1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speed_0.1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\malware-protection-10073263-8173802-ezgif.com-video-to-gif-converter.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-ezgif.com-webp-to-gif-converter.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-Z8kchLppbJWRpsWGf2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%291.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled_Project_V2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20240124-WA0023_V3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20240124-WA0023_V4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20240124-WA0023_V5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20240124-WA0023_V6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20240124-WA0023_V7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-38153511.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351%281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351%281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351%281%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351%282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-3815351_2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin-4610483-38153512.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="43489003-transformed-removebg-preview.ico" />
+    <Content Include="output_image__1_-removebg-preview.ico" />
+    <Content Include="viruslist.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\snapedit-1706169058170-removeb-unscreen2.gif" />
+    <None Include="Resources\YouCut_20240128_153045366-ezgif.com-video-to-gif-converter.gif" />
+    <None Include="Resources\snapedit-1706169058170-removeb-unscreen1.gif" />
+    <None Include="Resources\snapedit-1706169058170-removeb-unscreen.gif" />
+    <None Include="Resources\snapedit_1706169058170-removebg-preview_V1.gif" />
+    <None Include="Resources\output_image__1_-removebg-preview2.png" />
+    <None Include="Resources\output-onlinepngtools %282%29.png" />
+    <None Include="Resources\output_image__1_-removebg-preview1.png" />
+    <None Include="Resources\output_image__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
